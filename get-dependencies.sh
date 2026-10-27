@@ -66,8 +66,7 @@ git clone https://gitlab.gnome.org/donnybeelo/convey ./convey && (
 
 	# The release profile is mandatory when packaging, otherwise the
 	# development app ID and data directories are used
-	meson setup build --prefix=/usr --libdir=lib --buildtype=release \
-		-D profile=release
+	meson setup build --prefix=/usr --libdir=lib --buildtype=release -D profile=release
 	meson compile -C build
 	meson install -C build
 )
